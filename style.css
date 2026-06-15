@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: #f3f4f6;
+        /* Light Gray */
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+    }
+
+
+}
+
+header {
+
+    width: 100%;
+    height: 80px;
+    background: #E23744;
+    /* Zomato Red */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.logo img {
+    width: 140px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin-left: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: .3s;
+}
+
+header ul li a:hover {
+    color: #ff4d4d;
+}
+
+main {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 150px;
+    background: url('/bg.png')no-repeat center center/cover;
+}
+
+main img {
+    width: 300px;
+    margin-bottom: 20px;
+    animation: zoom 2s infinite alternate;
+}
+
+main p {
+    width: 700px;
+    max-width: 90%;
+    font-size: 28px;
+    line-height: 45px;
+    margin-bottom: 40px;
+    opacity: 0;
+    color: #f3f4f6;
+    animation: fadeIn 2s forwards;
+    background:url('/logo.png') content-box color(from color srgb r g b)
+}
+
+input {
+    width: 650px;
+    max-width: 90%;
+    padding: 18px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 18px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, .3);
+    transition: .4s;
+}
+
+input:focus {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px red;
+}
+
+footer {
+    width: 100%;
+    background: #E23744;
+    /* Zomato Red */
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@keyframes zoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+@media(max-width:768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    header ul {
+        margin-top: 20px;
+    }
+
+    header ul li {
+        margin: 0 10px;
+    }
+
+    main p {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+}
